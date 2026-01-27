@@ -1,17 +1,19 @@
 import Link from 'next/link'
 
 const Navigation = () => {
+  const navItems = [
+    { href: '/', label: 'Main' },
+    { href: '/about', label: 'About' },
+    { href: '/contacts', label: 'Contacts' },
+  ]
+
   return (
     <nav className="navigation">
-      <Link className="nav-link" href="/">
-        Main
-      </Link>
-      <Link className="nav-link" href="/about">
-        About
-      </Link>
-      <Link className="nav-link" href="/contacts">
-        Contacts
-      </Link>
+      {navItems.map((item) => (
+        <Link key={item.href} className="nav-link" href={item.href}>
+          {item.label}
+        </Link>
+      ))}
     </nav>
   )
 }
