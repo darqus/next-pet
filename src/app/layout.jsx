@@ -1,8 +1,8 @@
-import { Geist, Geist_Mono } from 'next/font/google'
+import Footer from '@components/Footer'
+import Navigation from '@components/Navigation'
 import './globals.css'
-import Footer from '@/components/Footer'
 
-const geistSans = Geist({
+/* const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
 })
@@ -10,7 +10,7 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
-})
+}) */
 
 export const metadata = {
   title: 'Create Next App',
@@ -21,12 +21,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div className='bg-grid'>
-          <main className='container page'>
-            {children}
-          </main>
-          <Footer />
-        </div>
+        <div className="bg-grid"></div>
+        <Navigation />
+        <main className="container page">{children}</main>
+        <Footer />
       </body>
     </html>
   )
