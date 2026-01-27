@@ -5,7 +5,6 @@
    ============================================= */
 /* Тема: корневые CSS‑переменные */
 :root {
-  --font-main: 'sans-serif';
   --bg: #070f14;
   --bg-2: #0b1620;
   --card: #0f1f2a;
@@ -44,7 +43,7 @@ body {
     "Segoe UI Emoji";
   overflow-x: hidden;
 
-  font-family: var(--font-main);
+  font-family: var(--font-inter);
 }
 
 /* Типографика: заголовки */
