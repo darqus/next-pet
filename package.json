@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "biome check",
-    "format": "biome format --write"
+    "format": "biome format --write",
+    "kill-dev": "bash kill-dev-process.sh",
+    "kill-dev-js": "node kill-dev-process.js"
   },
   "dependencies": {
     "next": "16.1.5",
