@@ -304,6 +304,11 @@ code pre {
 }
 
 /* Карточки */
+.cards {
+  display: grid;
+  gap: 1rem;
+}
+
 .card {
   background: linear-gradient(
     180deg,
@@ -314,6 +319,9 @@ code pre {
   border-radius: 14px;
   padding: 16px;
   transition: 150ms ease;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
 }
 
 .card:hover {
@@ -323,17 +331,19 @@ code pre {
     0 0 0 6px var(--ring);
 }
 
-.card--user-details {
+.item {
   display: grid;
-  grid-template-columns: 140px 1fr;
-  row-gap: 8;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5rem;
 }
 
 .item-title {
+  display: flex;
   font-weight: 600;
 }
 
 .item-sub {
+  display: flex;
   color: var(--muted);
   font-size: 14px;
 }
