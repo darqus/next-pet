@@ -1,0 +1,10 @@
+/* =============================================
+   Главный SCSS файл (main.scss)
+   Импортирует все модульные стили
+   ============================================= */
+
+@import 'variables';
+@import 'base';
+@import 'layout';
+@import 'components';
+@import 'utilities';

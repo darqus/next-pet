@@ -1,0 +1,25 @@
+/* =============================================
+   Переменные темы (_variables.scss)
+   ============================================= */
+
+/* Тема: корневые CSS‑переменные */
+:root {
+  --bg: #070f14;
+  --bg-2: #0b1620;
+  --card: #0f1f2a;
+  --text: #e6f1ff;
+  --muted: #9fb2c7;
+  --accent: #2fe39a;
+  --accent-2: #38bdf8;
+  --ring: rgba(47, 227, 154, 0.3);
+
+  --background: #fafafa;
+  --foreground: #fff;
+
+  --text-primary: #000;
+  --text-secondary: #666;
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+  --button-secondary-border: #ebebeb;
+}

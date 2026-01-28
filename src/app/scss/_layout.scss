@@ -1,0 +1,83 @@
+/* =============================================
+   Стили макета (_layout.scss)
+   ============================================= */
+
+/* Контейнер макета */
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* Фон: тонкая точечная сетка */
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image: radial-gradient(
+    rgba(120, 200, 255, 0.2) 1px,
+    transparent 1px
+  );
+  background-size: 18px 18px;
+  mask-image: radial-gradient(
+    circle at 50% 10%,
+    rgba(0, 0, 0, 0.99),
+    transparent 40%
+  );
+}
+
+/* Навигация: верхняя панель */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  /* backdrop-filter: saturate(130%) blur(10px); */
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Навигация: плавающий блок ссылок */
+.navigation {
+  position: sticky;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  width: max-content;
+  border-radius: 999px;
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  backdrop-filter: saturate(130%) blur(10px);
+}
+
+/* Ссылки навигации */
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 999px;
+  transition: 150ms ease;
+}
+
+.nav-link:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Разметка страницы */
+.page {
+  padding: 48px 0 64px;
+}
