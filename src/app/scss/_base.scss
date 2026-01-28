@@ -53,6 +53,11 @@ h6 {
   color: #fff;
 }
 
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
 /* Блоки кода */
 code pre {
   text-align: left;
