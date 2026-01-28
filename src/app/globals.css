@@ -66,6 +66,11 @@ h6 {
   color: #fff;
 }
 
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
 /* Блоки кода */
 code pre {
   text-align: left;
@@ -345,6 +350,7 @@ code pre {
   display: grid;
   grid-template-rows: 1fr 1fr;
   gap: 0.5rem;
+  color: #fff;
 }
 
 .item-title {

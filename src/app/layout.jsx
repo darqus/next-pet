@@ -17,7 +17,7 @@ export const metadata = {
 
 const RootLayout = ({ children }) => {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body>
         <div className="bg-grid"></div>
         <Navigation />
