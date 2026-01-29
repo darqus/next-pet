@@ -1,7 +1,7 @@
 import ButtonGetRequest from '@/components/ButtonGetRequest'
 
 const getMessageFromLocalAPI = async () => {
-  const res = await fetch('http://localhost:3000/api/hello')
+  const res = await fetch(`${process.env.NEXT_URL}/api/hello`)
   return res.json()
 }
 
