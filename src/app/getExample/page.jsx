@@ -1,5 +1,6 @@
 import ButtonGetRequest from '@/components/ButtonGetRequest'
 
+// это как пример, так делать не рекоментуется
 const getMessageFromLocalAPI = async () => {
   const res = await fetch(`${process.env.NEXT_URL}/api/hello`)
   return res.json()
