@@ -3,8 +3,9 @@
    Импортирует все модульные стили
    ============================================= */
 
-@import 'variables';
-@import 'base';
-@import 'layout';
-@import 'components';
-@import 'utilities';
+
+@use 'variables';
+@use 'base';
+@use 'layout';
+@use 'components';
+@use 'utilities';
