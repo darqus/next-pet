@@ -19,8 +19,8 @@ const AboutPage = () => {
       <Image
         src="/dodge-400-200.jpg"
         alt="Dodge"
-        width="400"
-        height="200"
+        width={400}
+        height={200}
         priority
       />
     </section>
