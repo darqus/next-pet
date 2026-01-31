@@ -1,5 +1,11 @@
 import Button from '@/components/Button'
 
+export const metadata = {
+  title: 'Next JS Example',
+  description: 'Dark modern Next.ls demo main page',
+  keywords: 'business, next js, react',
+}
+
 export default function Home() {
   return (
     <div className="content">
