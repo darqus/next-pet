@@ -13,6 +13,10 @@ const inter = Inter({
 export const metadata = {
   title: 'Next JS Example',
   description: 'Dark modern Next.ls demo',
+  openGraph: {
+    siteName: 'Tutorial',
+    description: 'Some text...',
+  },
 }
 
 const RootLayout = ({ children }) => {
