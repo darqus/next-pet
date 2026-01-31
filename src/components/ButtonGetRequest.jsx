@@ -7,8 +7,13 @@ const getMessageFromLocalAPI = async () => {
 
 const ButtonGetRequest = () => {
   const clickHandler = async () => {
-    const { message } = await getMessageFromLocalAPI()
-    alert(message)
+    try {
+      const { message } = await getMessageFromLocalAPI()
+      alert(message)
+    } catch (error) {
+      console.error('Failed to fetch message:', error)
+      alert('Failed to fetch message. Please try again.')
+    }
   }
 
   return (
