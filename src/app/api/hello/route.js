@@ -6,8 +6,8 @@ export const GET = async () => {
   return NextResponse.json(data)
 }
 
-export const POST = (req) => {
-  const { name } = req.json()
-  const greeting = createHelloGreeting(name)
-  return NextResponse.json({ message: `Hello ${name} from API post request!` })
+export const POST = async (req) => {
+  const { name } = await req.json()
+  const { message } = createHelloGreeting(name)
+  return NextResponse.json({ message })
 }
