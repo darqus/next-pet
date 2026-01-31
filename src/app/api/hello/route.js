@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { createHelloGreeting, getHelloMassage } from '../lib/hello'
+import { createHelloGreeting, getHelloMassage } from '../../../lib/hello'
 
 export const GET = async () => {
   const data = await getHelloMassage()

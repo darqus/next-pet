@@ -1,5 +1,5 @@
 import ButtonGetRequest from '@/components/ButtonGetRequest'
-import { getHelloMassage } from '@api/lib/hello'
+import { getHelloMassage } from '@/lib/hello'
 
 const GetExample = () => {
   const { message } = getHelloMassage()
