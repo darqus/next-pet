@@ -1,14 +1,15 @@
 'use client'
 
-const getMessageFromLocalAPI = async () => {
-  const res = await fetch('/api/hello')
-  return res.json()
-}
+import useSWR from 'swr'
+
+const fetcher = (url) => fetch(url).then((res) => res.json())
 
 const ButtonGetRequest = () => {
+  const { data, error } = useSWR('/api/hello', fetcher)
+
   const clickHandler = async () => {
     try {
-      const { message } = await getMessageFromLocalAPI()
+      const { message } = data || await fetcher('/api/hello')
       alert(message)
     } catch (error) {
       console.error('Failed to fetch message:', error)

@@ -1,16 +1,17 @@
 import Link from 'next/link'
+import { cache, memo } from 'react'
 
-const getUsers = async () => {
+const getUsers = cache(async () => {
   const res = await fetch('https://jsonplaceholder.typicode.com/users', {
-    cache: 'no-store',
+    next: { revalidate: 3600 },
   })
 
   if (!res.ok) throw new Error('Ошибка загрузки списка пользователей')
 
   return res.json()
-}
+})
 
-const UserItem = ({ id, name, email }) => {
+const UserItem = memo(({ id, name, email }) => {
   return (
     <Link href={`/users/${id}`} className="card">
       <div className="item">
@@ -18,14 +19,25 @@ const UserItem = ({ id, name, email }) => {
         <div className="item-sub">{email}</div>
       </div>
       <div>
-        <span aria-hidden>🢒</span>
+        <span aria-hidden="true">🢒</span>
       </div>
     </Link>
   )
-}
+})
+
+UserItem.displayName = 'UserItem'
 
 const UsersPage = async () => {
   const users = await getUsers()
+
+  if (users.length === 0) {
+    return (
+      <section className="content">
+        <h2 className="section-title">Users</h2>
+        <p className="muted">No users found.</p>
+      </section>
+    )
+  }
 
   return (
     <section className="content">

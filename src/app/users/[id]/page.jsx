@@ -1,6 +1,8 @@
-const getUser = async (id) => {
+import { cache } from 'react'
+
+const getUser = cache(async (id) => {
   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
-    cache: 'no-store',
+    next: { revalidate: 3600 },
   })
 
   if (!res.ok) {
@@ -11,7 +13,7 @@ const getUser = async (id) => {
   }
 
   return res.json()
-}
+})
 
 const UserPage = async ({ params }) => {
   const { id } = await params
